@@ -1,55 +1,38 @@
-import axios from "axios";
+import Search from "./models/Search";
 
-// NOTE: Refresher on using promises can be found here. Just open this block to look at the code
-{
-    // async function getResults(query) {
-    //     try {
-    //         const response = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${query}`);
-    //         const infoObj = {
-    //             apiInfo: response,
-    //             apiData: response.data,
-    //             apiRecipes: response.data.recipes
-    //         }
-    //         console.log(infoObj);
-    //     }
-    //     catch(err) {
-    //         console.log(`Error: ${err}`);
-    //     }
-    // }
-    
+/** GLobal state of the application
+ * Search object
+ * Current recipe object
+ * Shopping list object
+ * Liked recipes
+ */
+const state = {};
+console.log(state);
+const controlSearch = async () => {
+    //TODO: Get the query from the view
+    const query = "chicken";
 
-    // function getResults2(query) {
-    //     const response = axios(`https://forkify-api.herokuapp.com/api/search?&q=${query}`);
-    //     response.then((info) => {
-    //         const infoObj = {
-    //             apiInfo: info,
-    //             apiData: info.data,
-    //             apiRecipes: info.data.recipes
-    //         }
-    //         console.log(infoObj);
-    //     }).catch((err) => {
-    //         console.log("There was an error in the pinchi");
-    //     });
-    // }
+    // if there is a query create a new wearch object adn add it to the state
+    if (query) {
+        state.search = new Search(query);
+        // Prepare UI for results
     
-    // getResults("pizza");
-    // getResults2("pizza");
+        // search for recipes
+        search.getResults();
+
+        // render results on UI
+        await state.search.getResults();
+        console.log(state.search);
+    }
+
+
 }
 
-async function getResults(query) {
-    try {
-        const response = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${query}`);
-        const infoObj = {
-            apiInfo: response,
-            apiData: response.data,
-            apiRecipes: response.data.recipes
-        }
-        console.log(infoObj);
-    }
-    catch(err) {
-        console.log(`${err} ma pinchi`)
-    }
-    
-}
+document.querySelector(".search").addEventListener("submit", (e) => {
+    e.preventDefault();
+    controlSearch();
+});
 
-getResults("pizza");
+const search = new Search("pizza");
+console.log(search)
+
