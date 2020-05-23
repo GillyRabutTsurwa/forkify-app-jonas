@@ -1,32 +1,37 @@
 {
-  "name": "forkify",
-  "version": "1.0.0",
-  "description": "forkify javascript project practise advanced-intermediate javascript",
-  "main": "index.js",
-  "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "live": "webpack-dev-server --mode-development --open"
-  },
-  "keywords": [
-    "advanced-javascript",
-    "jonas-schmedtmann",
-    "project",
-    "forkify"
-  ],
-  "author": "Gilbert Rabut Tsurwa",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1"
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "babel-polyfill": "^6.26.0"
-  }
+    "name": "forkify",
+    "version": "1.0.0",
+    "description": "forkify javascript project practise advanced javascript",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack --mode development",
+        "build": "webpack --mode production",
+        "startdev": "webpack-dev-server --mode development --open",
+        "postinstall": "webpack -p",
+        "start": "node bundle.js"
+    },
+    "keywords": [
+        "advanced-javascript",
+        "jonas-schmedtmann",
+        "project",
+        "forkify"
+    ],
+    "author": "Gilbert Rabut Tsurwa",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
+        "babel-preset-env": "^1.7.0",
+        "html-webpack-plugin": "^3.2.0",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.1"
+    },
+    "dependencies": {
+        "axios": "^0.19.0",
+        "babel-polyfill": "^6.26.0",
+        "express": "^4.17.1",
+        "fractional": "^1.0.0",
+        "uniqid": "^5.2.0",
+        "webpack": "^4.41.5"
+    }
 }

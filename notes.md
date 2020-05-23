@@ -1,10 +1,12 @@
-# Notes.
-## Part 2 - API Calls
-*   Re-learnt making API calls.
-*   We are using **axios** and not **fetch**
-*   We do not use a proxy
-*   Refreshed my memory on using promises, both using **.then()** and using the more favourable **async/await**. 
+//NEW: 
+hashchange event
 
-## Part 2 - Search Model and Controller
-* Using ES6 classes to export models
-* Application state and way of implementing state... using Vanilla JS. No frameworks
+//TODO: 
+Look at ALL the array methods in Recipe.js
+
+
+//NOTE: Run either npm run dev or npm run build si tu veux voir le fichier HTML dans ton dossier dist
+
+//QUESTION: sais-tu la difference entre npm run dev et npm run build?
+
+//NEW: LOCALSTORAGE!
